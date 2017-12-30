@@ -92,9 +92,20 @@ def main():
         # ALL GAME LOGIC SHOULD GO BELOW THIS COMMENT
         
 ##      Move the object according to the speed vector
+        
         x_coord = x_coord + x_speed
         y_coord = y_coord + y_speed
         
+        if x_coord < 0:
+            x_coord = 0
+        elif x_coord > 688:
+            x_coord = 688
+            
+        if y_coord < 0:
+            y_coord = 0
+        elif y_coord > 473:
+            y_coord = 473
+            
         # ALL GAME LOGIC SHOULD GO ABOVE THIS COMMENT
  
         # ALL CODE TO DRAW SHOULD GO BELOW THIS COMMENT
@@ -120,4 +131,3 @@ def main():
  
 if __name__ == "__main__":
     main()
-
